@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "pre-commit..."
+
+if test $(git diff --cached --name-only | grep -E "package.json|bower.json" | wc -l) != 0
+then
+
+cat <<\EOF
+    Error: Please do not commit these files
+    1) package.json
+    2) bower.json
+
+    Please use the following command to fix this
+    git checkout -- package.json bower.json
+EOF
+  exit 1
+fi

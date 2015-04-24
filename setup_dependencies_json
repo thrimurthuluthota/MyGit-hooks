@@ -1,0 +1,11 @@
+#!/bin/bash
+
+IFS=$'\n'
+for line in $(cat ./.git-hooks/dependencies)
+do
+  key_value=($(echo ${line} | awk -F':' '{print $1; print $2}'))
+  key=$(echo ${key_value[0]} | sed 's/^ *//g' | sed 's/ *$//g' | sed -e 's/[\/&]/\\&/g')
+  value=$(echo ${key_value[1]} | sed 's/^ *//g' | sed 's/ *$//g' | sed -e 's/[\/&]/\\&/g')
+  sed -i.bak "s/@@${key}_VERSION/${value}/g" ./package.json
+  sed -i.bak "s/@@${key}_VERSION/${value}/g" ./bower.json
+done
