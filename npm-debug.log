@@ -1,17 +1,12 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
 1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   '--save',
-1 verbose cli   'dev',
-1 verbose cli   'gulp',
-1 verbose cli   'gulp-jshint',
-1 verbose cli   'gulp-gitmodified',
-1 verbose cli   'gulp-sysm' ]
+1 verbose cli   'run-script',
+1 verbose cli   'validate' ]
 2 info using npm@1.4.9
 3 info using node@v0.10.28
 4 error Failed to parse json
-4 error Unexpected end of input
+4 error Unexpected token h
 5 error File: c:\2.0\Projects\MyGit-hooks\package.json
 6 error Failed to parse package.json data.
 6 error package.json must be actual JSON, not just JavaScript.
@@ -19,7 +14,7 @@
 6 error This is not a bug in npm.
 6 error Tell the package author to fix their package.json file. JSON.parse
 7 error System Windows_NT 6.1.7601
-8 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "dev" "gulp" "gulp-jshint" "gulp-gitmodified" "gulp-sysm"
+8 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run-script" "validate"
 9 error cwd c:\2.0\Projects\MyGit-hooks
 10 error node -v v0.10.28
 11 error npm -v 1.4.9
